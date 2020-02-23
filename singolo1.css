@@ -95,3 +95,64 @@ body {
     top: 280px;
     left: 42px;
 }
+
+.services {
+    max-width: 1020px;
+    padding: 45px 40px 74px 40px;
+    height: 500px;
+    margin: auto;
+    background-color: rgb(244, 244, 244);
+}
+
+.services__wrapper {
+    color: #666d89;
+}
+
+.services__wrapper h2 {
+    font-size: 30px;
+    line-height: 18px;
+    font-weight: 900;
+}
+
+.services__wrapper p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    color: #767e9e;
+    font-family: "Lato";
+}
+
+.icon__item h3 {
+    font-size: 18px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 900;
+}
+.icon__item p {
+    font-size: 12px;
+    line-height: 22px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 400;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.icon__item {
+    width: 33%;
+}
+
+.svg_pen {
+    width: 59px;
+    min-width: 59px;
+    height: 59px;
+    background: url(./assets/pen.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 3px 0 0 1px;
+}
