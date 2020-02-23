@@ -145,6 +145,8 @@ body {
 
 .icon__item {
     width: 33%;
+    display: flex;
+    flex-direction: row;
 }
 
 .svg_pen {
@@ -152,6 +154,56 @@ body {
     min-width: 59px;
     height: 59px;
     background: url(./assets/pen.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 3px 0 0 1px;
+}
+
+.svg_bulb {
+    width: 59px;
+    min-width: 59px;
+    height: 59px;
+    background: url(./assets/bulb.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 3px 0 0 1px;
+}
+
+.svg_heart {
+    width: 59px;
+    min-width: 59px;
+    height: 59px;
+    background: url(./assets/heart.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 3px 0 0 1px;
+}
+
+.svg_phone {
+    width: 59px;
+    min-width: 59px;
+    height: 59px;
+    background: url(./assets/phone.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 3px 0 0 1px;
+}
+
+.svg_bubble {
+    width: 59px;
+    min-width: 59px;
+    height: 59px;
+    background: url(./assets/bubble.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 3px 0 0 1px;
+}
+
+.svg_star {
+    width: 59px;
+    min-width: 59px;
+    height: 59px;
+    background: url(./assets/star.png);
     background-repeat: no-repeat;
     background-position: center center;
     margin: 3px 0 0 1px;
