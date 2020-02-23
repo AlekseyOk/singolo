@@ -39,20 +39,59 @@ body {
     list-style: none;
     font-size: 11px;
     text-transform: uppercase;
-    margin: 13px -1.7px 0 26px;
+    margin: 14px 2px 0 26px;
     cursor: pointer;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.3px;
 }
 
 .navigation__link:not(:first-child)::before {
     position: relative;
     content: ".";
     color: #494e62;
-    top: -1.7px;
-    left: -11.8px;
+    top: -2px;
+    left: -13px;
     font-weight: 900;
 }
 
 .logo p > span {
     color: #f06c64;
+}
+
+.phones {
+    max-width: 1020px;
+    height: 600px;
+    margin: auto;
+    background-color: #f06c64;
+    border-bottom: 6px solid #ea676b;
+}
+
+.iphone-vertical, .iphone-horizontal, .chev-left, .chev-right {
+    position: absolute;
+}
+
+.phones__wrapper{
+    position: relative;
+}
+
+.iphone-vertical{
+    left: 112px;
+    top: 53px;
+}
+
+.iphone-horizontal{
+    left: 425px;
+    top: 174px;
+}
+
+.chev-right {
+    top: 280px;
+    right: 40px;
+    color: rgb(200, 70, 76);
+}
+
+.chev-left {
+    color: rgb(200, 70, 76);
+    transform: rotate(180deg);
+    top: 280px;
+    left: 42px;
 }
