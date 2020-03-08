@@ -677,7 +677,7 @@ body {
     padding-bottom: 153px;
     padding-top: 6px;
     margin-bottom: 0px;
-    resize:none;
+    resize: none;
 }
 
 .form__item::placeholder {
@@ -716,6 +716,10 @@ body {
 
 .contact__item__email {
     letter-spacing: 0px;
+}
+
+.contact__item__second {
+    margin-top: -3px;
 }
 
 .contact__item__address::before {
