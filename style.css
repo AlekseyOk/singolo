@@ -306,7 +306,7 @@ body {
     color: #767e9e;
     font-family: "Lato";
     font-weight: 300;
-    margin-top: 23px;
+    margin-top: 27px;
     margin-bottom: 0;
 }
 
@@ -348,7 +348,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 19px;
-    margin-bottom: 71px;
+    margin-bottom: 69px;
     overflow : hidden;
 }
 
