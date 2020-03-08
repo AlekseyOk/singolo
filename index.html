@@ -157,12 +157,14 @@
             <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus,
                 tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="contact__wrapper"> 
-                <form class="form__wrapper">
-                    <input class="form__item" type="text" name="Name" placeholder="Name (Required)" required></li>
-                    <input class="form__item" type="email" name="Email" placeholder="Email (Required)" required></li>
-                    <input class="form__item" type="text" name="Subject" placeholder="Subject"></li>
-                    <textarea class="form__item form__item__textarea" name="Describe" placeholder="Describe your project in detail..."></textarea></li>
-                    <button class="form__button">Submit</button>
+                <form class="form__wrapper" action="/" method="POST">
+                    <input class="form__item" type="text" name="Name" placeholder="Name (Required)" required>
+                    <input class="form__item" type="email" name="Email" placeholder="Email (Required)" required>
+                    <input class="form__item" type="text" name="Subject" placeholder="Subject">
+                    <textarea class="form__item form__item__textarea" name="Describe" placeholder="Describe your project in detail..."></textarea><br> 
+                    <div class="input-wrapper">
+                        <input class="button__submit" type="submit" value="Send" name="Send">
+                    </div>
                 </form>
                 <div class="contact__information">
                     <div class="contact__information__wrapper">
@@ -187,10 +189,10 @@
             <div class="footer__content">
                 <p class="footer__copyright">© Copyright 2013</p>
                 <div class="footer__icons">
-                        <div class="facebook__icon"></div>
-                        <div class="google__icon"></div>
-                        <div class="twitter__icon"></div>
-                        <div class="linkedin__icon"></div>
+                    <div class="facebook__icon"></div>
+                    <div class="google__icon"></div>
+                    <div class="twitter__icon"></div>
+                    <div class="linkedin__icon"></div>
                 </div>
             </div>
         </div>

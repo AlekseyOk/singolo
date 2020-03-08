@@ -612,7 +612,7 @@ body {
 
 .contact__wrapper {
     display: flex;
-    padding-bottom: 45px;
+    padding-bottom: 31px;
 }
 
 .contact__information h4 {
@@ -663,7 +663,7 @@ body {
     line-height: 22px;
     font-family: "Lato";
     font-weight: 400;
-    color: blue;
+    color: white;
 }
 
 .form__item:invalid:not(:placeholder-shown) {
@@ -676,6 +676,8 @@ body {
 .form__item__textarea {
     padding-bottom: 153px;
     padding-top: 6px;
+    margin-bottom: 0px;
+    resize:none;
 }
 
 .form__item::placeholder {
@@ -683,7 +685,7 @@ body {
 }
 
 .contact__information {
-    margin-left: -110px;
+    margin-left: -96px;
     margin-top: 2.6px;
 }
 
@@ -726,6 +728,7 @@ body {
     background-repeat: no-repeat;
     padding-right: 15px;
     margin-left: -1px;
+    cursor: pointer;
 }
 
 .contact__item__phone-number::before {
@@ -751,10 +754,6 @@ body {
     padding-right: 15px;
 }
 
-
-.form__button {
-    visibility: hidden;
-}
 
 .footer__wrapper {
     max-width: 1020px;
@@ -817,4 +816,35 @@ body {
 .footer__content {
     display: flex;
     justify-content: space-between;
+}
+
+.button__submit {
+    margin-top: 15px;
+    border: 1px solid #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.button__submit:hover,
+.button__submit:focus {
+    color: #f48c8f;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.button__submit {
+    width: 100px;
+    border: 1px solid #ffffff;
+    color: #f48c8f;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+.button__submit:hover,
+.button__submit:focus {
+    color: #575d74;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.5);
 }
