@@ -22,6 +22,15 @@ body {
     justify-content: space-between;
 }
 
+.header__wrapper h1 {
+    font-size: 25px;
+    line-height: 6px;
+    color: #ffffff;
+    font-family: "Lato";
+    font-weight: 700;
+    margin-top: 25px;
+}
+
 .logo {
     font-size: 25px;
     color: #ffffff;
@@ -44,6 +53,11 @@ body {
     letter-spacing: 0.3px;
 }
 
+.navigation__link:hover {
+    color: #f06c64;
+}
+
+
 .navigation__link:not(:first-child)::before {
     position: relative;
     content: ".";
@@ -51,9 +65,10 @@ body {
     top: -2px;
     left: -13px;
     font-weight: 900;
+    cursor: auto;
 }
 
-.logo p > span {
+.logo h1 > span {
     color: #f06c64;
 }
 
@@ -87,6 +102,7 @@ body {
     top: 280px;
     right: 40px;
     color: rgb(200, 70, 76);
+    cursor: pointer;
 }
 
 .chev-left {
@@ -94,13 +110,15 @@ body {
     transform: rotate(180deg);
     top: 280px;
     left: 42px;
+    cursor: pointer;
 }
 
 .services {
     max-width: 1020px;
-    padding: 45px 40px 74px 40px;
+    padding: 45px 40px 0px 40px;
     margin: auto;
     background-color: rgb(244, 244, 244);
+    border-bottom: 6px solid white;
 }
 
 .services__wrapper {
@@ -118,7 +136,7 @@ body {
     font-weight: 300;
     line-height: 30px;
     color: #767e9e;
-    letter-spacing: 0.14px;
+    text-align: justify;
 }
 
 .icon__item h3 {
@@ -128,17 +146,22 @@ body {
     font-family: "Lato";
     font-weight: 900;
 }
+
 .icon__item p {
     font-size: 12px;
     line-height: 22px;
+    height: 63px;
     color: #767e9e;
     font-family: "Lato";
     font-weight: 400;
-    letter-spacing: 0.3px;
+    text-align: justify;
+    overflow: hidden;
+    letter-spacing: 0.2px;
 }
 
 .icons {
     margin-top: 47px;
+    padding-bottom: 62px;
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
@@ -251,6 +274,7 @@ body {
 .support_item h3 {
     margin-top: -2px;
     margin-left: 22.5px;
+    letter-spacing: -0.3px;
 }
 
 .ideas_item p {
@@ -282,13 +306,13 @@ body {
     color: #767e9e;
     font-family: "Lato";
     font-weight: 300;
-    margin-top: 27px;
+    margin-top: 23px;
     margin-bottom: 0;
 }
 
 .buttons-wrapper {
     margin-top: 11px;
-    width: 288px;
+    width: 289px;
 }
 
 .buttons-list {
@@ -319,11 +343,13 @@ body {
 }
 
 .portfolio-block {
+    height: 600px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 19px;
-    padding-bottom: 48px;
+    margin-bottom: 71px;
+    overflow : hidden;
 }
 
 .portfolio-block div {
@@ -440,7 +466,8 @@ body {
     color: #767e9e;
     font-family: "Lato";
     font-weight: 300;
-    margin-top: 28px;
+    margin-top: 25px;
+    text-align: justify;
 }
 
 .description__header {
@@ -503,12 +530,13 @@ body {
     color: #767e9e;
     font-family: "Lato";
     font-weight: 400;
-    margin: 13px 0;
+    margin-top: 12px;
+    text-align: justify;
     letter-spacing: -0.1px;
 }
 
 .social__network__icons {
-    margin-top: 22px;
+    margin-top: 23px;
     margin-left: 1px;
     display: flex;
     flex-wrap: wrap;
@@ -522,6 +550,7 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background: url(./assets/facebook_icon.png);
+    cursor: pointer;
 }
 
 .google__icon {
@@ -530,6 +559,7 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background: url(./assets/google_icon.png);
+    cursor: pointer;
 }
 
 .twitter__icon {
@@ -538,6 +568,7 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background: url(./assets/twitter_icon.png);
+    cursor: pointer;
 }
 
 .linkedin__icon {
@@ -546,6 +577,7 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background: url(./assets/linkedin_icon.png);
+    cursor: pointer;
 }
 
 /* singolo3 */
@@ -574,12 +606,13 @@ body {
     font-family: "Lato";
     font-weight: 300;
     margin-top: 28px;
+    margin-bottom: 16px;
     text-align: justify;
 }
 
 .contact__wrapper {
     display: flex;
-    padding-bottom: 25px;
+    padding-bottom: 45px;
 }
 
 .contact__information h4 {
@@ -589,7 +622,7 @@ body {
     font-family: "Lato";
     font-weight: 900;
     letter-spacing: -0.1px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 
 .contact__information p {
@@ -599,7 +632,9 @@ body {
     font-family: "Lato";
     font-weight: 400;
     margin-top: 10px;
-    letter-spacing: -0.3px;
+    letter-spacing: -0.2px;
+    text-align: justify;
+    margin: 0;
 }
 
 .contact__wrapper ul {
@@ -608,16 +643,16 @@ body {
     padding: 0;
 }
 
-.form__wrapper ul {
+/* .form__wrapper ul {
     min-width: 620px;
-}
+} */
 
 .form__wrapper {
     margin-top: 26px;
 }
 
 .form__item {
-    padding: 8px 0px 8px 15px;
+    padding: 8px 0px 8.3px 15px;
     margin-bottom: 17px;
     border: 0px solid;
     border-radius: 5px;
@@ -639,7 +674,8 @@ body {
 }
 
 .form__item__textarea {
-    padding-bottom: 150px;
+    padding-bottom: 153px;
+    padding-top: 6px;
 }
 
 .form__item::placeholder {
@@ -647,12 +683,12 @@ body {
 }
 
 .contact__information {
-    margin-left: 20px;
-    margin-top: 2px;
+    margin-left: -110px;
+    margin-top: 2.6px;
 }
 
 .contact__items {
-    margin-top: 22px;
+    margin-top: 20px;
 }
 
 .contact__items a {
@@ -660,16 +696,16 @@ body {
 }
 
 .contact__item {
-    font-size: 12px;
+    font-size: 11px;
     line-height: 22px;
     color: #f0d8d9;
     font-family: "Lato";
     font-weight: 400;
-    letter-spacing: 0.8px;
+    margin: 0;
 }
 
 .contact__item__address {
-    margin-bottom: 0px;
+    margin: 0px;
 }
 
 .contact__item__phone-number {
@@ -715,6 +751,7 @@ body {
     padding-right: 15px;
 }
 
+
 .form__button {
     visibility: hidden;
 }
@@ -733,8 +770,8 @@ body {
     font-weight: normal;
     font-style: normal;
     color: #575d74;
-    padding-top: 31px;
-    padding-bottom: 31px;
+    padding-top: 34px;
+    padding-bottom: 36px;
 }
 
 .facebook__icon {
