@@ -105,12 +105,20 @@ body {
     cursor: pointer;
 }
 
+.chev-right:hover {
+    opacity: 70%;
+}
+
 .chev-left {
     color: rgb(200, 70, 76);
     transform: rotate(180deg);
     top: 280px;
     left: 42px;
     cursor: pointer;
+}
+
+.chev-left:hover {
+    opacity: 70%;
 }
 
 .services {
@@ -523,6 +531,10 @@ body {
     font-weight: 900;
     margin: 19px 0 0 -1px;
     letter-spacing: -0.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 22px;
 }
 
 .person__wrapper p {
@@ -531,7 +543,7 @@ body {
     color: #767e9e;
     font-family: "Lato";
     font-weight: 400;
-    margin-top: 12px;
+    margin-top: 5px;
     text-align: justify;
     letter-spacing: -0.1px;
 }
@@ -543,6 +555,11 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 152px;
+}
+
+.social__network__icons div:hover {
+    background-color: #fff;
+    border-radius: 50px;
 }
 
 .facebook__icon {
@@ -811,6 +828,11 @@ body {
     justify-content: space-between;
     width: 152px;
     margin-top: 22px;
+}
+
+.footer__icons div:hover {
+    background-color: #fff;
+    border-radius: 50px;
 }
 
 .footer__content {
