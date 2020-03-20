@@ -8,6 +8,12 @@ body {
     font-weight: 700;
 }
 
+.header__wrapper {
+    z-index: 3;
+    width: 100%;
+    position: fixed;
+}
+
 .header {
     max-width: 1020px;
     height: 95px;
@@ -17,12 +23,12 @@ body {
     border-bottom: 6px solid #323746;
 }
 
-.header__wrapper {
+.main__wrapper {
     display: flex;
     justify-content: space-between;
 }
 
-.header__wrapper h1 {
+.main__wrapper h1 {
     font-size: 25px;
     line-height: 6px;
     color: #ffffff;
@@ -65,7 +71,7 @@ body {
     text-decoration: none;
 }
 
-.navigation__link a.active {
+.navigation__link a.activeItem {
     color: #f06c64;
 }
 
@@ -87,12 +93,33 @@ body {
     color: #f06c64;
 }
 
+.empty__item {
+    height: 95px;
+}
+
+/* .carusel {
+    max-width: 1020px;
+    height: 600px;
+    margin: auto;
+    position: relative;
+} */
+
+.first-slide {
+    background-color: #f06c64;
+    border-bottom: 6px solid #ea676b; 
+}
+
+.second-slide {
+    background-image: url(./assets/Slide-2.png);
+}
+
 .phones {
     max-width: 1020px;
     height: 600px;
     margin: auto;
     background-color: #f06c64;
     border-bottom: 6px solid #ea676b;
+    scroll-margin-top: 96px; 
 }
 
 .second-slide {
@@ -187,6 +214,7 @@ body {
     margin: auto;
     background-color: rgb(244, 244, 244);
     border-bottom: 6px solid white;
+    scroll-margin-top: 95px; 
 }
 
 .services__wrapper {
@@ -351,6 +379,10 @@ body {
 
 /* singolo2 */
 
+.portfolio { 
+    scroll-margin-top: 94px; 
+}
+
 .portfolio__wrapper {
     max-width: 1020px;
     padding: 67px 40px 0px 40px;
@@ -411,6 +443,17 @@ body {
     color: #dedede;
 }
 
+.active {
+    border-color: #c5c5c5;
+    color: #dedede;
+}
+
+.button, 
+.button:active, 
+.button:focus {
+    outline: none;
+}
+
 .portfolio-block {
     height: 600px;
     display: flex;
@@ -419,6 +462,11 @@ body {
     margin-top: 19px;
     margin-bottom: 69px;
     overflow : hidden;
+    cursor: pointer;
+}
+
+.activeCurrent {
+    border: #F06C64 solid 5px;
 }
 
 .portfolio-block div {
@@ -519,6 +567,10 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background: url(./assets/Image12.png);
+}
+
+#description {
+    scroll-margin-top: 96px; 
 }
 
 .description__wrapper {
@@ -660,6 +712,10 @@ body {
 
 /* singolo3 */
 
+.quote {
+    scroll-margin-top: 94px; 
+}
+
 .quote__wrapper {
     max-width: 1020px;
     padding: 69px 40px 0px 40px;
@@ -689,6 +745,7 @@ body {
 }
 
 .contact__wrapper {
+    position: relative;
     display: flex;
     padding-bottom: 31px;
 }
@@ -930,3 +987,147 @@ body {
     background-color: #ffffff;
     box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.5);
 }
+
+/* form */
+
+#message-block {
+    position: absolute;
+    left: 50%;
+    margin-left:-200px;
+}
+
+#message-block.hidden {
+    display: none;
+}
+
+#message {
+    width: 400px;
+    height: 200px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: rgb(212, 87, 83);
+    padding: 0px 10px;
+    border: solid white 5px;
+    border-radius: 10px;
+}
+
+#close-btn {
+    height: 22px;
+    text-align: center;
+    padding: 0px 6px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    background-color: white;
+    color: rgb(212, 87, 83);
+    cursor: pointer;
+    font-family: "Lato";
+    font-weight: normal;
+}
+
+#close-btn:hover {
+    cursor: pointer;
+}
+
+/* carusel */
+
+.carousel {
+    text-align: center;
+    max-width: 1020px;
+    height: 600px;
+    margin: auto;
+    position: relative;
+    scroll-margin-top: 96px;
+}
+  
+  .items-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .item {
+    display: none;
+    position: relative;
+    animation: 0.5s ease-in-out;
+    margin: 0 auto;
+  }
+  
+  .active,
+  .next {
+    display: block;
+  }
+  
+  .next {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  .description {
+    font-size: 32px;
+    height: 600px;
+  }
+  
+  .project-name {
+    padding: 10px;
+  }
+  
+  .to-left {
+    animation-name: left;
+  }
+  
+  .from-right {
+    animation-name: right;
+  }
+  
+  .to-right {
+    animation-name: right;
+    animation-direction: reverse;
+  }
+  
+  .from-left {
+    animation-name: left;
+    animation-direction: reverse;
+  }
+  
+  @keyframes left {
+    from {
+      left: 0;
+    }
+    to {
+      left: -100%;
+    }
+  }
+  
+  @keyframes right {
+    from {
+      left: 100%;
+    }
+    to {
+      left: 0;
+    }
+  }
+  
+  @media (max-width: 960px) {
+    .description {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .control > .arrow {
+      display: none;
+    }
+  
+    .project-name {
+      display: none;
+    }
+  
+    .description {
+      border: 0;
+    }
+  }

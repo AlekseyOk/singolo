@@ -9,32 +9,55 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="wrapper header__wrapper">
-            <a href="#" class="logo"><h1>Singolo<span>*</span></h1></a>
-            <nav class="header__navigation">
-                <ul id="navigation">
-                    <li class="navigation__link"><a class="active" href="#phones">Home</a></li>
-                    <li class="navigation__link"><a href="#services">Services</a></li>
-                    <li class="navigation__link"><a href="#portfolio">Portfolio</a></li>
-                    <li class="navigation__link"><a href="#description">About</a></li>
-                    <li class="navigation__link"><a href="#quote">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <section class="phones" id="phones">
+    <div class="header__wrapper">
+        <header class="header">
+            <div class="wrapper main__wrapper">
+                <a href="" class="logo"><h1>Singolo<span>*</span></h1></a>
+                <nav class="header__navigation">
+                    <ul id="navigation">
+                        <li class="navigation__link"><a class="activeItem" href="#carousel">Home</a></li>
+                        <li class="navigation__link"><a href="#services">Services</a></li>
+                        <li class="navigation__link"><a href="#portfolio">Portfolio</a></li>
+                        <li class="navigation__link"><a href="#description">About</a></li>
+                        <li class="navigation__link"><a href="#quote">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <div class="empty__item"></div>
+    <section class="carousel" id="carousel">
+            <div class="items-container">
+              <div class="item active">
+                <div class="description first-slide">
+                    <img src="./assets/iphone-vertical.png" id="iphone-vertical" alt="iphone">
+                    <img src="./assets/iphone-horizontal.png" id="iphone-horizontal" alt="iphone">
+                    <div class="first-screen" id="first-screen"></div>
+                    <button id="first-phone-button"></button>
+                    <div class="second-screen" id="second-screen"></div>
+                    <button id="second-phone-button"></button>
+                </div>
+              </div>
+              <div class="item">
+                <div class="description second-slide">
+                </div>
+              </div>
+            </div>
+            <img src="./assets/chev.png" class="chev-right" id="chev-right"  alt="iphone">
+            <img src="./assets/chev.png" class="chev-left" id="chev-left"   alt="iphone">
+    </section>
+    <!-- <section class="phones" id="phones">
         <div class="wrapper phones__wrapper">
             <img src="./assets/iphone-vertical.png" id="iphone-vertical" alt="iphone">
             <img src="./assets/iphone-horizontal.png" id="iphone-horizontal" alt="iphone">
             <img src="./assets/chev.png" id="chev-right" alt="iphone">
             <img src="./assets/chev.png" id="chev-left"  alt="iphone">
             <div class="first-screen" id="first-screen"></div>
-            <button id="first-phone-button"></button>
+            <button id="first-phone-button1"></button>
             <div class="second-screen" id="second-screen"></div>
-            <button id="second-phone-button"></button>
+            <button id="second-phone-button2"></button>
         </div>
-    </section>
+    </section> -->
     <section class="services" id="services">
         <div class="wrapper services__wrapper">
             <h2>Our Services</h2>
@@ -91,27 +114,14 @@
             <h2>Portfolio</h2>
             <p class="portfolio-specification">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
             <div class="buttons-wrapper">
-                <ul class="buttons-list">
+                <ul class="buttons-list" id="buttons-list">
                     <li><button class="button">All</button></li>
                     <li><button class="button">Web Design</button></li>
                     <li><button class="button">Graphic Design</button></li>
                     <li><button class="button">Artwork</button></li>
                 </ul>
             </div>
-            <div class="portfolio-block">
-                <div class="portfolio-item1"></div>
-                <div class="portfolio-item2"></div>
-                <div class="portfolio-item3"></div>
-                <div class="portfolio-item4"></div>
-                <div class="portfolio-item5"></div>
-                <div class="portfolio-item6"></div>
-                <div class="portfolio-item7"></div>
-                <div class="portfolio-item8"></div>
-                <div class="portfolio-item9"></div>
-                <div class="portfolio-item10"></div>
-                <div class="portfolio-item11"></div>
-                <div class="portfolio-item12"></div>
-            </div>
+            <div class="portfolio-block" id="portfolio-block"><div class="portfolio-item1"></div><div class="portfolio-item2"></div><div class="portfolio-item3"></div><div class="portfolio-item4"></div><div class="portfolio-item5"></div><div class="portfolio-item6"></div><div class="portfolio-item7"></div><div class="portfolio-item8"></div><div class="portfolio-item9"></div><div class="portfolio-item10"></div><div class="portfolio-item11"></div><div class="portfolio-item12"></div></div>
         </div>
     </section>
     <section id="description">
@@ -162,14 +172,22 @@
                 tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="contact__wrapper"> 
                 <form class="form__wrapper" action="#" method="GET">
-                    <input class="form__item" type="text" name="Name" placeholder="Name (Required)" required>
-                    <input class="form__item" type="email" name="Email" placeholder="Email (Required)" required>
-                    <input class="form__item" type="text" name="Subject" placeholder="Subject">
-                    <textarea class="form__item form__item__textarea" name="Describe" placeholder="Describe your project in detail..."></textarea><br> 
+                    <input class="form__item" id="name" type="text" name="Name" placeholder="Name (Required)" required>
+                    <input class="form__item" id="mail" type="email" name="Email" placeholder="Email (Required)" required>
+                    <input class="form__item" id="subject" type="text" name="Subject" placeholder="Subject">
+                    <textarea class="form__item form__item__textarea" id="textarea" name="Describe" placeholder="Describe your project in detail..."></textarea><br> 
                     <div class="input-wrapper">
-                        <input class="button__submit" type="submit" value="Submit" name="Send">
+                        <input class="button__submit" id="button__submit" type="submit" value="Submit" name="Send">
                     </div>
                 </form>
+                <div id="message-block" class="hidden">
+                    <div id="message">
+                        <p>The letter was sent</p>
+                        <p id="subjectFill"></p>
+                        <p id="textareaFill"></p>
+                    <button id="close-btn">Ok</button>
+                    </div>
+                </div>
                 <div class="contact__information">
                     <div class="contact__information__wrapper">
                     <h4>Contact Information</h4>
