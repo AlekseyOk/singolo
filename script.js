@@ -9,11 +9,7 @@ const secondScreen = document.getElementById('second-screen');
 const firstPhoneButton = document.getElementById('first-phone-button');
 const secondPhoneButton = document.getElementById('second-phone-button');
 
-navigation.addEventListener('click', (event)=> {
-    navigation.querySelectorAll('a').forEach(el => el.classList.remove('activeItem'));
-    event.target.classList.add('activeItem');
-})
-
+// плавный переход по ссылкам
 const anchors = document.querySelectorAll('a[href^="#"]');
 
 for (let anchor of anchors) {
@@ -26,46 +22,6 @@ for (let anchor of anchors) {
        })
     })
 }
-
-    // chevLeft.addEventListener('click', ()=> {
-    //     if(phonesBlock.classList.contains('second-slide')){
-    //         phonesBlock.classList.remove('second-slide');
-    //         firstScreen.classList.remove('first-black-screen');
-    //         secondScreen.classList.remove('second-black-screen');
-    //         firstPhoneButton.hidden = false; 
-    //         secondPhoneButton.hidden = false; 
-    //         iphoneVertical.hidden = false; 
-    //         iphoneHorizontal.hidden = false;
-    //     } else {
-    //         phonesBlock.classList.add('second-slide');
-    //         firstScreen.classList.remove('first-black-screen');
-    //         secondScreen.classList.remove('second-black-screen');
-    //         firstPhoneButton.hidden = true; 
-    //         secondPhoneButton.hidden = true; 
-    //         iphoneVertical.hidden = true; 
-    //         iphoneHorizontal.hidden = true;
-    //     }
-    // })
-
-    // chevRight.addEventListener('click', ()=> {
-    //     if(phonesBlock.classList.contains('second-slide')){
-    //         phonesBlock.classList.remove('second-slide');
-    //         firstScreen.classList.remove('first-black-screen');
-    //         secondScreen.classList.remove('second-black-screen');
-    //         firstPhoneButton.hidden = false; 
-    //         secondPhoneButton.hidden = false; 
-    //         iphoneVertical.hidden = false; 
-    //         iphoneHorizontal.hidden = false;
-    //     } else {
-    //         phonesBlock.classList.add('second-slide');
-    //         firstScreen.classList.remove('first-black-screen');
-    //         secondScreen.classList.remove('second-black-screen');
-    //         firstPhoneButton.hidden = true; 
-    //         secondPhoneButton.hidden = true; 
-    //         iphoneVertical.hidden = true; 
-    //         iphoneHorizontal.hidden = true;
-    //     }
-    // })
 
 firstPhoneButton.addEventListener('click', ()=> {
     if(firstScreen.classList.contains('first-black-screen')){
@@ -89,8 +45,10 @@ let imagesNodeList = document.getElementById('portfolio-block');
 let buttonsNodeList = document.getElementById('buttons-list');
 
 buttonsNodeList.addEventListener('click', (event) => {
-    buttonsNodeList.querySelectorAll('li > button').forEach(el => el.classList.remove('active'));
-    event.target.classList.add('active');
+    console.log(event.target.tagName);
+    if (event.target.tagName !== "BUTTON") return;
+    buttonsNodeList.querySelectorAll('li > button').forEach(el => el.classList.remove('activeTab'));
+    event.target.classList.add('activeTab');
     const lastPicture = document.getElementById('portfolio-block').lastChild;
     imagesNodeList.prepend(lastPicture);
 });
@@ -198,3 +156,24 @@ document.querySelector('.chev-left').addEventListener('click', function() {
 		nextItem(currentItem);
 	}
 });
+
+/*переключение меню*/
+
+document.addEventListener('scroll', onScroll);
+
+function onScroll() {
+    const links = document.querySelectorAll('#navigation > .navigation__link > a');
+    const indent = window.scrollY + 105;
+    const sections = document.querySelectorAll('section');
+
+    sections.forEach((el) => {
+        if (el.offsetTop <= indent && (el.offsetTop + el.offsetHeight) > indent) {
+            links.forEach((a) => {
+                a.classList.remove('activeItem');
+                if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                    a.classList.add('activeItem');
+                };
+            })
+        }
+    })
+}
