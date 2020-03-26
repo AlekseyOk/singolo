@@ -127,7 +127,7 @@ body {
 
 #iphone-horizontal{
     right: 111px;
-    top: 174px;
+    top: 177px;
 }
 
 #chev-right {
@@ -164,8 +164,8 @@ body {
 
 .second-black-screen {
     position: absolute;
-    right: 201px;
-    top: 187px;
+    right: 202px;
+    top: 191px;
     width: 333px;
     height: 189px;
     background-color: black;
@@ -445,7 +445,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 19px;
-    margin-bottom: 69px;
+    margin-bottom: 50px;
     cursor: pointer;
 }
 
@@ -708,7 +708,7 @@ body {
 
 .quote__wrapper {
     max-width: 1020px;
-    padding: 69px 40px 0px 40px;
+    padding: 66px 40px 0px 40px;
     background-color:#f06c64;
     margin: auto;
     border-bottom: 5px solid #ea676b;
@@ -950,9 +950,6 @@ body {
 }
 
 .button__submit {
-    /* margin-top: 15px;
-    border: 1px solid #ffffff;
-    text-transform: uppercase; */
     cursor: pointer;
 }
 
@@ -1091,7 +1088,6 @@ body {
 
 /* hamburger */
 
- 
  #menuToggle
  {
    display: block;
@@ -1205,7 +1201,7 @@ body {
    position: absolute;
    width: 83%;
    text-align: left;
-   padding-left: 28%;
+   padding-left: 27%;
    margin: -50px 0 0 -50px;
    padding-top: 12px;
    background: #2D303A;
@@ -1229,7 +1225,7 @@ body {
  }
 
  #menu a:first-child li:first-child {
-    padding-bottom: 168px;
+    padding-bottom: 170px;
     font-family: Lato;
     font-style: normal;
     font-weight: bold;
@@ -1259,7 +1255,7 @@ body {
  }
 
 
-@media (max-width: 1019.999px) {
+@media (max-width: 1019px) {
     #iphone-vertical {
         width: calc(100vw * 240 / 1020);
         height: calc(100vw * 483 / 1020);
@@ -1354,11 +1350,12 @@ body {
     
     .portfolio-block {
         margin-top: 30px;
-        margin-bottom: 48px;
+        margin-bottom: 47px;
     }
 
     .description__wrapper {
         padding-top: 61px ;
+        padding-bottom: 3px;
     }
 
     .person__image {
@@ -1442,9 +1439,13 @@ body {
     #menuToggle {
         display: none;
     }
+
+    .first-phone-button, .second-phone-button, .first-screen, .second-screen {
+        display: none;
+    }
 }
 
-@media (max-width: 767.999px) {
+@media (max-width: 767px) {
     .form__item {
         width: 296px;
     }
@@ -1494,7 +1495,7 @@ body {
     #menuToggle {
         display: block;
         top: -49px;
-        left: 17px;
+        left: 20px;
     }
 
     #menu {
@@ -1584,28 +1585,13 @@ body {
         background-size: cover;
     }
 
-    .portfolio-block {
-        margin-top: 25px;
-    }
-
-    .portfolio-item9{
-        display: none;
-    }
-
-    .portfolio-item10{
-        display: none;
-    }
-    
-    .portfolio-item11{
-        display: none;
-    }
-
-    .portfolio-item12{
-        display: none;
-    }
+    .portfolio-block :nth-child(n+9) { 
+        display: none; 
+    } 
 
     .portfolio-block {
         margin-bottom: 22px;
+        margin-top: 25px;
     }
 
     .description__wrapper {
@@ -1657,7 +1643,7 @@ body {
     }
 
     .button__submit {
-        width: 314px;
+        width: 100%;
         height: 48px;
     }
 
@@ -1695,3 +1681,43 @@ body {
     }
 }
 
+@media (max-width: 374px) {
+    .buttons-wrapper {
+        width: 258px;
+    }
+
+    .button {
+        font-size: 9px;
+    }
+
+    .portfolio-item {
+        width: calc(100vw * 123 / 320);
+        height: calc(100vw * 100 / 320);
+    }
+
+    #menuToggle {
+        left: 35px;
+    }
+
+    #iphone-vertical {
+        left: 20%;
+        top: 16%;
+        width: calc(100vw * 200 / 1020);
+        height: calc(100vw * 400 / 1020);
+    }
+
+    #chev-left {
+        left: 11%;
+    }
+
+    #chev-right {
+        right: 11%;
+    }
+
+    #iphone-horizontal {
+        top: 34.5%;
+        right: 19.2%;
+        height: calc(100vw * 200 / 1020);
+        width: calc(100vw * 400 / 1020);
+    }
+}

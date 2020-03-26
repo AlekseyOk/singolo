@@ -41,15 +41,19 @@ secondPhoneButton.addEventListener('click', ()=> {
 
 //tabs
 
-let imagesNodeList = document.getElementById('portfolio-block');
+function getImages () {
+    let imagesNodeList = document.getElementById('portfolio-block');
+    const lastPicture = document.getElementById('portfolio-block').lastChild;
+    imagesNodeList.prepend(lastPicture);
+}
+
 let buttonsNodeList = document.getElementById('buttons-list');
 
 buttonsNodeList.addEventListener('click', (event) => {
     if (event.target.tagName !== "BUTTON") return;
     buttonsNodeList.querySelectorAll('li > button').forEach(el => el.classList.remove('activeTab'));
     event.target.classList.add('activeTab');
-    const lastPicture = document.getElementById('portfolio-block').lastChild;
-    imagesNodeList.prepend(lastPicture);
+    getImages();
 });
 
 const portfolioBlock = document.getElementById('portfolio-block');
