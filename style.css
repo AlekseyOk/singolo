@@ -365,7 +365,7 @@ body {
 /* singolo2 */
 
 .portfolio { 
-    scroll-margin-top: 95px; 
+    scroll-margin-top: 93px; 
 }
 
 .portfolio__wrapper {
@@ -703,7 +703,7 @@ body {
 /* singolo3 */
 
 .quote {
-    scroll-margin-top: 95px; 
+    scroll-margin-top: 94px; 
 }
 
 .quote__wrapper {
@@ -969,6 +969,7 @@ body {
     position: absolute;
     left: 50%;
     margin-left:-200px;
+    top: 0%;
 }
 
 #message-block.hidden {
@@ -1680,6 +1681,17 @@ body {
         justify-content: center;
     }
 }
+
+@media (max-width: 425px) {
+    #message-block {
+        margin-left: -150px;
+    }
+    #message {
+        width: 300px;
+    }
+}
+
+
 
 @media (max-width: 374px) {
     .buttons-wrapper {
