@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header__wrapper">
+    <div class="header-wrapper">
         <header class="header">
             <div class="wrapper main__wrapper">
                 <a href="" class="logo"><h1>Singolo<span>*</span></h1></a>
@@ -24,8 +24,22 @@
                 </nav>
             </div>
         </header>
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+              <a href="#carousel"><li>Singolo*</li></a>
+              <a href="#carousel"><li>Home</li></a>
+              <a href="#services"><li>Services</li></a>
+              <a href="#portfolio"><li>Portfolio</li></a>
+              <a href="#description"><li>About</li></a>
+              <a href="#quote"><li>Contact</li></a>
+            </ul>
+          </div>
     </div>
-    <div class="empty__item"></div>
+    <div class="empty-item"></div>
     <section class="carousel" id="carousel">
             <div class="items-container">
               <div class="item active">
@@ -43,8 +57,8 @@
                 </div>
               </div>
             </div>
-            <img src="./assets/chev.png" class="chev-right" id="chev-right"  alt="iphone">
-            <img src="./assets/chev.png" class="chev-left" id="chev-left"   alt="iphone">
+            <img src="./assets/chev.png" class="chev-right" id="chev-left" alt="iphone">
+            <img src="./assets/chev.png" class="chev-left"  id="chev-right" alt="iphone">
     </section>
     <section class="services" id="services">
         <div class="wrapper services__wrapper">
@@ -109,7 +123,7 @@
                     <li><button class="button">Artwork</button></li>
                 </ul>
             </div>
-            <div class="portfolio-block" id="portfolio-block"><div class="portfolio-item1"></div><div class="portfolio-item2"></div><div class="portfolio-item3"></div><div class="portfolio-item4"></div><div class="portfolio-item5"></div><div class="portfolio-item6"></div><div class="portfolio-item7"></div><div class="portfolio-item8"></div><div class="portfolio-item9"></div><div class="portfolio-item10"></div><div class="portfolio-item11"></div><div class="portfolio-item12"></div></div>
+            <div class="portfolio-block" id="portfolio-block"><div class="portfolio-item1 portfolio-item"></div><div class="portfolio-item2 portfolio-item"></div><div class="portfolio-item3 portfolio-item"></div><div class="portfolio-item4 portfolio-item"></div><div class="portfolio-item5 portfolio-item"></div><div class="portfolio-item6 portfolio-item"></div><div class="portfolio-item7 portfolio-item"></div><div class="portfolio-item8 portfolio-item"></div><div class="portfolio-item9 portfolio-item"></div><div class="portfolio-item10 portfolio-item"></div><div class="portfolio-item11 portfolio-item"></div><div class="portfolio-item12 portfolio-item"></div></div>
         </div>
     </section>
     <section id="description">
@@ -118,7 +132,7 @@
             <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="people__wrapper">
                 <div class="person__wrapper">
-                    <div class="person__image1"></div>
+                    <div class="person__image1 person__image"></div>
                     <h3>Adam Jensen</h3>
                     <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
                     <div class="social__network__icons">
@@ -129,7 +143,7 @@
                     </div>
                 </div>
                 <div class="person__wrapper">
-                    <div class="person__image2"></div>
+                    <div class="person__image2 person__image"></div>
                     <h3>Desmond Miles</h3>
                     <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
                     <div class="social__network__icons">
@@ -139,8 +153,8 @@
                         <div class="linkedin__icon"></div>
                     </div>
                 </div>
-                <div class="person__wrapper">
-                    <div class="person__image3"></div>
+                <div class="person__wrapper person__wrapper__third">
+                    <div class="person__image3 person__image"></div>
                     <h3>Scolara Visari</h3>
                     <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
                     <div class="social__network__icons">
@@ -165,7 +179,7 @@
                     <input class="form__item" id="subject" type="text" name="Subject" placeholder="Subject">
                     <textarea class="form__item form__item__textarea" id="textarea" name="Describe" placeholder="Describe your project in detail..."></textarea><br> 
                     <div class="input-wrapper">
-                        <input class="button__submit" id="button__submit" type="submit" value="Submit" name="Send">
+                        <input class="button__submit" id="button__submit" type="submit" value="SEND" name="Submit">
                     </div>
                 </form>
                 <div id="message-block" class="hidden">
@@ -177,9 +191,9 @@
                     </div>
                 </div>
                 <div class="contact__information">
-                    <div class="contact__information__wrapper">
+                    <div>
                     <h4>Contact Information</h4>
-                    <p class="contact__information__header">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra
+                    <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra
                         nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus
                         faucibus. Morbi at aliquet turpis, et consequat felis.</p>
                     </div>

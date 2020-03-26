@@ -45,7 +45,6 @@ let imagesNodeList = document.getElementById('portfolio-block');
 let buttonsNodeList = document.getElementById('buttons-list');
 
 buttonsNodeList.addEventListener('click', (event) => {
-    console.log(event.target.tagName);
     if (event.target.tagName !== "BUTTON") return;
     buttonsNodeList.querySelectorAll('li > button').forEach(el => el.classList.remove('activeTab'));
     event.target.classList.add('activeTab');
@@ -177,3 +176,4 @@ function onScroll() {
         }
     })
 }
+
