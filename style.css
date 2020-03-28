@@ -1213,7 +1213,7 @@ body {
  #menu
  {
    position: absolute;
-   width: 83%;
+   width: 82%;
    text-align: left;
    padding-left: 27%;
    margin: -50px 0 0 -50px;
@@ -1247,6 +1247,11 @@ body {
     line-height: 24px;
     letter-spacing: -0.03em;
     color: #FFFFFF;
+ }
+
+ #menu a:first-child li:first-child div {
+     display: inline-block;
+     color: #f06c64;
  }
 
  #menuToggle .activeItemMenu {
