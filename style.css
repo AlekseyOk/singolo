@@ -1248,6 +1248,10 @@ body {
     letter-spacing: -0.03em;
     color: #FFFFFF;
  }
+
+ #menuToggle .activeItemMenu {
+    color: #f06c64;
+ }
  
  #menu li
  {

@@ -184,5 +184,18 @@ function onScroll() {
             })
         }
     })
+
+    const links2 = document.querySelectorAll('#menu > a');
+
+    sections.forEach((el) => {
+        if (el.offsetTop <= indent && (el.offsetTop + el.offsetHeight) > indent) {
+            links2.forEach((a) => {
+                a.classList.remove('activeItemMenu');
+                if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                    a.classList.add('activeItemMenu');
+                };
+            })
+        }
+    })
 }
 
