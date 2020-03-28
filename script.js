@@ -73,10 +73,11 @@ const subject = document.getElementById('subject');
 const textarea = document.getElementById('textarea');
 const subjectFill = document.getElementById('subjectFill');
 const textareaFill = document.getElementById('textareaFill');
+const form = document.querySelector(".form__wrapper");
 
 function subjectFunc(string) {
     if (string === '') {
-        return 'Без темы';
+        return 'no subject';
     } else {
         return 'Тема: ' + string;
     }
@@ -84,20 +85,24 @@ function subjectFunc(string) {
 
 function textareaFunc(string) {
     if (string === '') {
-        return 'Без описания';
+        return 'no description';
     } else {
         return 'Описание: ' + string;
     }
 }
 
-button.addEventListener('click', (event) => {
+form.addEventListener("submit", () => submitHendler());
+
+
+function submitHendler() {
     event.preventDefault();
-    if (name.checkValidity() && mail.checkValidity()) {
-        subjectFill.innerText = subjectFunc(subject.value.toString());
-        textareaFill.innerText = textareaFunc(textarea.value.toString());
-        document.getElementById('message-block').classList.remove('hidden');
-    }
-});
+        let isValid = form.checkValidity();
+        if(isValid) {
+            subjectFill.innerText = subjectFunc(subject.value.toString());
+            textareaFill.innerText = textareaFunc(textarea.value.toString());
+            document.getElementById('message-block').classList.remove('hidden');
+        }
+}
 
 const closeBtn = document.getElementById('close-btn');
 

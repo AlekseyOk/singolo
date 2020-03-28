@@ -706,6 +706,19 @@ body {
     scroll-margin-top: 94px; 
 }
 
+#subjectFill, #textareaFill {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-top: 0;
+}
+
+#message p {
+    margin-bottom: 0;
+}
+
 .quote__wrapper {
     max-width: 1020px;
     padding: 66px 40px 0px 40px;
@@ -978,7 +991,7 @@ body {
 
 #message {
     width: 400px;
-    height: 200px;
+    height: 210px;
     border: 2px solid black;
     text-align: center;
     background-color: rgb(212, 87, 83);
