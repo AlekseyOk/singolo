@@ -45,6 +45,16 @@ body {
     letter-spacing: -0.5px;
 }
 
+.logo h1:hover {
+    color: #f06c64;
+    transition: .3s;
+}
+
+.logo h1 span:hover {
+    color: #ffffff;
+    transition: .3s;
+}
+
 #navigation {
     display:  flex;
 }
@@ -61,6 +71,7 @@ body {
 
 .navigation__link a {
     color: white;
+    transition: .2s;
 }
 
 .navigation__link a:visited {
@@ -160,6 +171,7 @@ body {
     width: 188px;
     height: 335px;
     background-color: black;
+    transition: .5s;
 }
 
 .second-black-screen {
@@ -169,6 +181,7 @@ body {
     width: 333px;
     height: 189px;
     background-color: black;
+    transition: .5s;
 }
 
 #first-phone-button {
@@ -420,6 +433,7 @@ body {
     letter-spacing: 0.3px;
     color: #767e9e;
     background-color: rgb(45, 48, 58);
+    transition: .2s;
 }
 
 .button:hover {
@@ -662,6 +676,7 @@ body {
 .social__network__icons div:hover {
     background-color: #fff;
     border-radius: 50px;
+    transition: .3s;
 }
 
 .facebook__icon {
@@ -798,6 +813,11 @@ body {
     font-family: "Lato";
     font-weight: 400;
     color: white;
+}
+
+.form__item:hover {
+    opacity: 0.7;
+    transition: .3s;
 }
 
 .form__item:invalid:not(:placeholder-shown) {
@@ -955,6 +975,7 @@ body {
 .footer__icons div:hover {
     background-color: #fff;
     border-radius: 50px;
+    transition: .3s;
 }
 
 .footer__content {
@@ -964,9 +985,6 @@ body {
 
 .button__submit {
     cursor: pointer;
-}
-
-.button__submit {
     width: 136px;
     height: 38px;
     background: #FBC65F;
@@ -974,7 +992,12 @@ body {
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-  }
+}
+
+.button__submit:hover {
+    opacity: .8;
+    transition: .2s;
+}
 
 /* form */
 
@@ -1017,6 +1040,9 @@ body {
 
 #close-btn:hover {
     cursor: pointer;
+    color: rgb(212, 87, 83);
+    opacity: 0.8;
+    transition: 0.3;
 }
 
 /* carusel */
@@ -1303,11 +1329,13 @@ body {
     #chev-left {
         top: calc(50% - 14px);
         left: 4%;
+        transition: .2s;
     }
 
     #chev-right {
         top: calc(50% - 14px);
         right: 3.8%;
+        transition: .2s;
     }
 
     #navigation {
@@ -1539,6 +1567,19 @@ body {
 
     .services {
         padding: 30px 42px 0px 32px;
+        scroll-margin-top: 70px; 
+    }
+
+    .portfolio {
+        scroll-margin-top: 70px; 
+    }
+
+    .quote {
+        scroll-margin-top: 70px; 
+    }
+
+    #description {
+        scroll-margin-top: 70px; 
     }
 
     .icon__item {

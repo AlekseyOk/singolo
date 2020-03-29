@@ -199,3 +199,12 @@ function onScroll() {
     })
 }
 
+//close menu
+const menuLinks = document.querySelectorAll('#menu > a');
+const checkBox = document.querySelectorAll('#menuToggle > input');
+
+menuLinks.forEach(el => { 
+    el.addEventListener('click', () => {
+        checkBox[0].checked = false;
+    })
+});
